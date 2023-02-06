@@ -25,10 +25,24 @@ body, html {
     border-radius: 15px;
 }
 
+/* Header */ 
+
 .header {
     background-color: #FFDE22;
     grid-column: 2 / 4;
+    display: grid;
+    grid-template: 1fr 1fr / 6fr 1fr 1fr 1fr;
 }
+
+.search-bar {
+    justify-self: start;
+}
+
+.icon-2 {
+    justify-self: start;
+}
+
+/* Sidebar */
 
 .sidebar {
     background-color: #FF7755;

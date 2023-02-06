@@ -2,5 +2,39 @@
 
 /* SETUP */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: repeat(3,1fr) 8fr;
+}
+
+.search-area {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.search-bar {
+  justify-self: start;
+}
+
+
+
+.notification-icons ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 3fr;
+}
+
+.notification-icons ul,
+.notification-icons li {
+  list-style-type: none;
+  font-size: 16px;
+}
+
+

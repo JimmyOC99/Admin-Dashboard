@@ -36,8 +36,9 @@ body, html {
 .header {
     background-color: white;
     grid-column: 2 / 4;
-    display: grid;
-    grid-template: 1fr 1fr / 6fr 1fr 1fr 1fr;
+    display: inline-grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template-areas: "search-bar top-icons" "bottom-header button-id";
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
@@ -48,10 +49,50 @@ body, html {
 
 .search-bar {
     justify-self: start;
+    border: 2px solid;
 }
 
-.icon-2 {
+.search-bar input[type=text] {
+    width: 100%;
+    float: right;
+    padding: 6px;
+    border: none;
+    font-size: 15px;
+    background-color: #bccbde;
+    border-radius: 15px;
+  }
+
+.top-icons {
+
+}
+
+.header-bottom {
     justify-self: start;
+}
+
+.button-area ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.button-area ul .btn {
+    background-color: rgba(0, 162, 255, 0.466);
+    font-size: 0.7rem;
+    display: grid;
+    border-radius: 20px;
+    padding: 10px 5px;
+}
+
+.notification img , .search-bar img{ 
+    height: 15px;
+    width: 15px;
+}
+
+.profile-pic img{
+    height: 25px;
+    width: 25px;
 }
 
 /* -------------------- Sidebar ---------------------- */

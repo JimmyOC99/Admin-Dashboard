@@ -49,6 +49,10 @@ body, html {
     grid-row: 1 / 4;
 }
 
+
+
+/* Projects */
+
 .projects {
     background-color: #00DDFF;
     grid-column: 2 / 3;

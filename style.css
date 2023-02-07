@@ -59,11 +59,48 @@ body, html {
     grid-row: 2 / 4;
 }
 
+.project-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.project-tiles p {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
+}
+
+.project-tiles .card {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: center;
+    height: 100px;
+}
+
+.project-tiles p {
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 5px;
+}
+  
+.project-tiles .title {
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/* Announcements */
+
 .announcement {
     background-color: #bccbde;
     grid-column: 3 / 4;
     grid-row: 2 / 3;
 }
+
+/* Trending */
 
 .trending {
     background-color: #393f4d;

@@ -1,5 +1,11 @@
 @import 'meyer-reset.css';
 
+.overflowing {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -13,7 +19,7 @@ body, html {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 2fr 2fr;
-    gap: 15px;
+
 }
 
 .container div {
@@ -22,7 +28,6 @@ body, html {
     font-family: Helvetica;
     font-weight: bold;
     color: white;
-    border-radius: 15px;
 }
 
 /* Header */ 
@@ -79,14 +84,14 @@ body, html {
     height: 100px;
 }
 
-.project-tiles p {
+.card p {
     color: black;
     font-weight: normal;
     font-size: 14px;
     padding: 5px;
 }
   
-.project-tiles .title {
+.card .title {
     font-size: 18px;
     text-align: center;
 }
@@ -100,10 +105,43 @@ body, html {
     grid-row: 2 / 3;
 }
 
+.announcement-tiles p {
+    font-size: 12px;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
+}
+
+.announcement-tiles .tile {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: center;
+    height: 100px;
+    border-bottom: solid #bccbde;
+}
+
+.tile p {
+    color: black;
+    font-weight: normal;
+    font-size: 10px;
+    padding: 5px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+  
+.tile .title {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+}
+
+
 /* Trending */
 
 .trending {
     background-color: #393f4d;
     grid-column: 3 / 4;
-    grid-row: 3 / 4;
 }

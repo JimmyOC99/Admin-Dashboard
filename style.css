@@ -295,6 +295,7 @@ bottom {
     color: black;
     font-size: 1.5rem;
     padding-top: 20px;
+    padding-left: 20px;
 }
 
 .project-tiles {
@@ -366,38 +367,59 @@ bottom {
     grid-area: announcement-section;
 }
 
-.announcement-tiles p {
-    font-size: 12px;
-    font-family: sans-serif;
-    color: white;
+.announcement h3 {
     text-align: left;
+    color: black;
+    font-size: 1.5rem;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.announcement-tiles {
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #FFFFFF;
 }
 
 .announcement-tiles .tile {
-    background-color: #FFFFFF;
     color: black;
-    text-align: center;
+    text-align: left;
     height: 1fr;
-    border-bottom: solid #bccbde;
+    border-bottom: solid #bccbde84;
+    
 }
 
-.tile p {
-    color: black;
-    font-weight: normal;
-    font-size: 10px;
-    padding: 5px;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-  
 .tile .title {
     font-size: 12px;
     font-weight: 700;
     text-align: left;
+    color: black;
 }
+
+.tile p {
+    color: rgba(0, 0, 0, 0.455);
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 1.2;
+    margin: 10px;
+    max-width: 80%;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.announcement-tiles .tile:last-child {
+    border-bottom: none;
+}
+  
+
 
 
 /*  ---------------- Trending -------------- */

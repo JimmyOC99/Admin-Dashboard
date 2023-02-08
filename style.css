@@ -18,13 +18,12 @@ body, html {
     padding: 16px;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 250px 3fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
-
+    grid-template-columns: 250px 4fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: "sidebar-section header-section" "sidebar-section main-section";
 }
 
 .container div {
-    padding: 15px;
     font-size: 32px;
     font-family: Helvetica;
     font-weight: bold;
@@ -35,9 +34,9 @@ body, html {
 
 .header {
     background-color: white;
-    grid-column: 2 / 4;
-    display: inline-grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-area: header-section;
+    display: grid;
+    grid-template: 1fr 1.5fr / 1fr max-content;
     grid-template-areas: "search-bar top-icons" "bottom-header button-id";
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     z-index: 10;
@@ -47,9 +46,15 @@ body, html {
     color: black;
 }
 
+
+/* Top section */
 .search-bar {
-    justify-self: start;
+    grid-area: search-bar;
+    align-self: stretch;
+    justify-items: center;
     border: 2px solid;
+    padding-left: 20px;
+    padding-bottom: 10px;
 }
 
 .search-bar input[type=text] {
@@ -60,14 +65,65 @@ body, html {
     font-size: 15px;
     background-color: #bccbde;
     border-radius: 15px;
-  }
-
-.top-icons {
-
 }
 
+.top-icons {
+    grid-area: top-icons;
+}
+
+.top-icons ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.top-icons ul .icon {
+    background-color: rgba(0, 162, 255, 0.466);
+    font-size: 0.7rem;
+    display: grid;
+    border-radius: 20px;
+    padding: 10px 5px;
+}
+
+/* Bottom section */
+
+/* header section */
+
 .header-bottom {
-    justify-self: start;
+    grid-area: bottom-header;
+    
+    border: 2px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.header-bottom > a,
+.header-bottom > .intro {
+
+    padding-left: 10px;
+}
+
+.header-bottom a img {
+    height: 40px;
+    width: 40px;
+}
+
+.header-bottom h5 {
+    font-size: 0.5rem;
+    text-align: left;
+}
+
+.header-bottom h3 {
+    font-size: 1rem;
+}
+
+/*button-section*/
+
+.button-area {
+    grid-area: button-id;
 }
 
 .button-area ul{
@@ -75,6 +131,7 @@ body, html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
+    align-items: center;
 }
 
 .button-area ul .btn {
@@ -99,7 +156,7 @@ body, html {
 
 .sidebar {
     background-color: #FF7755;
-    grid-row: 1 / 4;
+    grid-area: sidebar-section;
     width: fit-content;
     display: flex;
     flex-direction: column;
